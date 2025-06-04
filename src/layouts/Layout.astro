@@ -1,0 +1,27 @@
+---
+import Background from "../components/Background.astro";
+import Header from "../components/Header.astro";
+import "../styles/global.css";
+
+// Prop para controlar overflow
+const { overflow = "auto" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Gpagus™</title>
+  </head>
+  <body class={`font-display bg-bg text-text overflow-${overflow}`}>
+    <Background />
+    <Header />
+
+    <main class="relative w-full max-w-6xl mx-auto text-center min-h-screen flex flex-col px-4">
+      <slot />
+    </main>
+  </body>
+</html>

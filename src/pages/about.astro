@@ -1,0 +1,194 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout overflow="auto">
+  <div class="flex-1 flex flex-col justify-center space-y-16 py-20">
+    <!-- Sección de perfil -->
+    <section class="flex flex-col lg:flex-row items-center gap-6 lg:gap-12">
+      <!-- Foto de perfil -->
+      <div class="relative group animate-content flex-shrink-0">
+        <div class="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 relative group">
+          <!-- Sombra decorativa -->
+          <div
+            class="absolute inset-0 border-2 border-text rounded-2xl transform transition-transform duration-300 group-hover:translate-x-2 group-hover:translate-y-2"
+          ></div>
+          <!-- Imagen -->
+          <img
+            src="/images/avatar.webp"
+            alt="Agustín (Gpagus) - Desarrollador Web"
+            class="w-full h-full object-cover rounded-2xl relative z-10 transition-transform duration-300 group-hover:-translate-x-1 group-hover:-translate-y-1"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <!-- Descripción -->
+      <div class="flex-1 max-w-2xl text-center lg:text-left">
+        <!-- Título animado -->
+        <div class="mb-4 lg:mb-6">
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight">
+            <span class="overflow-hidden inline-flex">
+              <span class="inline-block opacity-0 animate-rise" style="animation-delay: 0.1s;">S</span>
+              <span class="inline-block opacity-0 animate-rise" style="animation-delay: 0.2s;">o</span>
+              <span class="inline-block opacity-0 animate-rise" style="animation-delay: 0.3s;">b</span>
+              <span class="inline-block opacity-0 animate-rise" style="animation-delay: 0.4s;">r</span>
+              <span class="inline-block opacity-0 animate-rise" style="animation-delay: 0.5s;">e</span>
+            </span>
+            <span class="italic overflow-hidden inline-flex pr-3">
+              <span class="inline-block opacity-0 animate-rise" style="animation-delay: 0.6s;">m</span>
+              <span class="inline-block opacity-0 animate-rise" style="animation-delay: 0.7s;">í</span>
+            </span>
+          </h1>
+        </div>
+
+        <!-- Descripción con animación -->
+        <div class="animate-content space-y-4" style="animation-delay: 0.4s;">
+          <p class="text-sm lg:text-base leading-relaxed text-textSecondary">
+            Soy <strong class="text-text">Agustín Gómez Piñero</strong>, un desarrollador web apasionado por convertir ideas en
+            experiencias digitales memorables. Me especializo en diseñar
+            soluciones elegantes y funcionales.
+          </p>
+
+          <p class="text-sm lg:text-base leading-relaxed text-textSecondary">
+            Me encanta trabajar en proyectos que tengan impacto real y que ayuden a mejorar la
+            digitalización de pequeños negocios y ayuntamientos.
+          </p>
+
+          <!-- Botón de descarga -->
+          <div class="pt-2">
+            <a
+              href="/cv-agustin-gpagus.pdf"
+              download
+              class="inline-flex items-center gap-2 bg-white border-2 border-text px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 hover:bg-text hover:text-bg hover:translate-x-1 hover:translate-y-1 group"
+            >
+              Descargar CV
+              <svg
+                class="w-4 h-4 transform transition-transform group-hover:translate-y-1"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7,10 12,15 17,10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de habilidades -->
+    <section class="animate-content space-y-4 lg:space-y-6" style="animation-delay: 0.6s;">
+      <div class="text-center">
+        <h2 class="text-2xl lg:text-3xl font-elegant mb-3">
+          Technical <span class="italic text-primary">Stack</span>
+        </h2>
+        <p class="text-textSecondary max-w-2xl mx-auto text-sm">
+          Tecnologías y herramientas que utilizo para crear aplicaciones web excepcionales
+        </p>
+      </div>
+
+      <!-- Grid de habilidades -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+        <!-- Frontend -->
+        <div class="group bg-white/30 backdrop-blur-sm p-4 rounded-2xl border border-border hover:bg-white/50 transition-all duration-300 hover:scale-105">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xl">💻</span>
+            <h3 class="text-lg font-medium">Frontend</h3>
+          </div>
+          <ul class="space-y-2 text-textSecondary">
+            <li class="flex items-center gap-2 transition-colors hover:text-primary text-sm">
+              <span class="w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
+              HTML5 & CSS3
+            </li>
+            <li class="flex items-center gap-2 transition-colors hover:text-primary text-sm">
+              <span class="w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
+              JavaScript (ES6+)
+            </li>
+            <li class="flex items-center gap-2 transition-colors hover:text-primary text-sm">
+              <span class="w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
+              React JSX
+            </li>
+            <li class="flex items-center gap-2 transition-colors hover:text-primary text-sm">
+              <span class="w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
+              Tailwind, Astro
+            </li>
+          </ul>
+        </div>
+
+        <!-- Backend -->
+        <div class="group bg-white/30 backdrop-blur-sm p-4 rounded-2xl border border-border hover:bg-white/50 transition-all duration-300 hover:scale-105">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xl">⚙️</span>
+            <h3 class="text-lg font-medium">Backend</h3>
+          </div>
+          <ul class="space-y-2 text-textSecondary">
+            <li class="flex items-center gap-2 transition-colors hover:text-primary text-sm">
+              <span class="w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
+              Node.js + Express
+            </li>
+            <li class="flex items-center gap-2 transition-colors hover:text-primary text-sm">
+              <span class="w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
+              Java EE + Hibernate
+            </li>
+            <li class="flex items-center gap-2 transition-colors hover:text-primary text-sm">
+              <span class="w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
+              Supabase
+            </li>
+            <li class="flex items-center gap-2 transition-colors hover:text-primary text-sm">
+              <span class="w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
+              MySQL, PostgreSQL
+            </li>
+          </ul>
+        </div>
+
+        <!-- Tools -->
+        <div class="group bg-white/30 backdrop-blur-sm p-4 rounded-2xl border border-border hover:bg-white/50 transition-all duration-300 hover:scale-105">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xl">🛠️</span>
+            <h3 class="text-lg font-medium">Tools</h3>
+          </div>
+          <ul class="space-y-2 text-textSecondary">
+            <li class="flex items-center gap-2 transition-colors hover:text-primary text-sm">
+              <span class="w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
+              Postman
+            </li>
+            <li class="flex items-center gap-2 transition-colors hover:text-primary text-sm">
+              <span class="w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
+              Figma
+            </li>
+            <li class="flex items-center gap-2 transition-colors hover:text-primary text-sm">
+              <span class="w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
+              Git & GitHub
+            </li>
+          </ul>
+        </div>
+
+        <!-- Learning -->
+        <div class="group bg-primary/10 backdrop-blur-sm p-4 rounded-2xl border border-primary/30 hover:bg-primary/20 transition-all duration-300 hover:scale-105">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xl">📚</span>
+            <h3 class="text-lg font-medium">Aprendiendo</h3>
+          </div>
+          <ul class="space-y-2 text-textSecondary">
+            <li class="flex items-center gap-2 transition-colors hover:text-primary text-sm">
+              <span class="w-2 h-2 bg-primary rounded-full opacity-60 flex-shrink-0"></span>
+              TypeScript
+            </li>
+            <li class="flex items-center gap-2 transition-colors hover:text-primary text-sm">
+              <span class="w-2 h-2 bg-primary rounded-full opacity-60 flex-shrink-0"></span>
+              Spring Boot
+            </li>
+            <li class="flex items-center gap-2 transition-colors hover:text-primary text-sm">
+              <span class="w-2 h-2 bg-primary rounded-full opacity-60 flex-shrink-0"></span>
+              Python
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

@@ -1,0 +1,38 @@
+@import "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap";
+@import "tailwindcss";
+
+@theme {
+    --color-bg: #EBEBEB;
+    --color-text: #1c1c1c;
+    --color-textSecondary: #3E5C76;
+    --color-primary: #4A90E2;
+    --color-hover: #005A87;
+    --color-border: #D9E6F2;
+
+
+    /* Tipografía */
+    --font-display: "Montserrat", sans-serif;
+}
+
+@keyframes riseFromGround {
+  0% {
+    opacity: 0;
+    transform: translateY(150%);
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-rise {
+  animation: riseFromGround 1s ease-in-out forwards;
+}
+
+html {
+    scroll-behavior: smooth;
+}
