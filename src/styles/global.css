@@ -9,30 +9,34 @@
     --color-hover: #005A87;
     --color-border: #D9E6F2;
 
-
-    /* Tipografía */
-    --font-display: "Montserrat", sans-serif;
+    --font-elegant: "Montserrat", serif;
+    --font-sans: "Montserrat", sans-serif;
 }
 
+/* Safe area support para iOS */
+.safe-area-inset-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* ANIMACIONES MIGRADAS */
 @keyframes riseFromGround {
   0% {
     opacity: 0;
     transform: translateY(150%);
   }
-
   20% {
     opacity: 1;
   }
-
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 .animate-rise {
   animation: riseFromGround 1s ease-in-out forwards;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }

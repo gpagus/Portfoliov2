@@ -1,0 +1,43 @@
+<!-- Desktop Navigation - Centro de pantalla -->
+<nav class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30 w-full max-w-none hidden lg:flex justify-around items-center gap-12 uppercase tracking-wider bg-bg/20 rounded-2xl border border-border/30 group hover:border-border/60 transition-all duration-300">
+  <span class="text-2xl animate-pulse opacity-20 group-hover:opacity-100 transition-opacity duration-500">✦</span>
+  <a href="/about" class="relative py-3 transition-all duration-300 opacity-30 group-hover:opacity-100">
+    <span class="text-textSecondary group-hover:text-primary transition-colors duration-300 text-xs block">01</span>
+    <span class="block text-md">Sobre mí</span>
+  </a>
+  <a href="/projects" class="relative py-3 transition-all duration-300 opacity-30 group-hover:opacity-100">
+    <span class="text-textSecondary group-hover:text-primary transition-colors duration-300 text-xs block">02</span>
+    <span class="block text-md">Proyectos</span>
+  </a>
+  <a href="/contact" class="relative py-3 transition-all duration-300 opacity-30 group-hover:opacity-100">
+    <span class="text-textSecondary group-hover:text-primary transition-colors duration-300 text-xs block">03</span>
+    <span class="block text-md">Contacto</span>
+  </a>
+  <span class="text-2xl animate-pulse opacity-20 group-hover:opacity-100 transition-opacity duration-500">✦</span>
+</nav>
+
+<!-- Mobile/Tablet Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 z-30 lg:hidden bg-bg/95 backdrop-blur-md border-t border-border/50 px-4 py-2 safe-area-inset-bottom">
+  <div class="flex justify-around items-center max-w-lg mx-auto">
+    <a href="/about" class="flex flex-col items-center py-2 px-3">
+      <div class="w-8 h-8 mb-1 flex items-center justify-center rounded-full bg-primary/10">
+        <span class="text-base">👤</span>
+      </div>
+      <span class="text-xs font-medium text-textSecondary">Sobre mí</span>
+    </a>
+
+    <a href="/projects" class="flex flex-col items-center py-2 px-3">
+      <div class="w-8 h-8 mb-1 flex items-center justify-center rounded-full bg-primary/10">
+        <span class="text-base">💼</span>
+      </div>
+      <span class="text-xs font-medium text-textSecondary">Proyectos</span>
+    </a>
+
+    <a href="/contact" class="flex flex-col items-center py-2 px-3">
+      <div class="w-8 h-8 mb-1 flex items-center justify-center rounded-full bg-primary/10">
+        <span class="text-base">📧</span>
+      </div>
+      <span class="text-xs font-medium text-textSecondary">Contacto</span>
+    </a>
+  </div>
+</nav>

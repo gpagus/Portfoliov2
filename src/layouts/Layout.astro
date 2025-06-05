@@ -1,7 +1,9 @@
 ---
+import "../styles/global.css";
+import { ClientRouter } from "astro:transitions";
 import Background from "../components/Background.astro";
 import Header from "../components/Header.astro";
-import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
 
 // Prop para controlar overflow
 const { overflow = "auto" } = Astro.props;
@@ -15,12 +17,15 @@ const { overflow = "auto" } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Gpagus™</title>
+    <ClientRouter />
   </head>
   <body class={`font-display bg-bg text-text overflow-${overflow}`}>
     <Background />
     <Header />
+    <Navigation />
 
-    <main class="relative w-full max-w-6xl mx-auto text-center min-h-screen flex flex-col px-4">
+    <!-- Main con padding bottom para el bottom navigation -->
+    <main class="relative w-full max-w-6xl mx-auto text-center min-h-screen flex flex-col px-4 pb-20 lg:pb-8">
       <slot />
     </main>
   </body>
